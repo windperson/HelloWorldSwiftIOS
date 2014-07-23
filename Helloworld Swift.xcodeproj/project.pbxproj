@@ -12,6 +12,8 @@
 		2125DEB619729585006C08B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2125DEB419729585006C08B9 /* Main.storyboard */; };
 		2125DEB819729585006C08B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2125DEB719729585006C08B9 /* Images.xcassets */; };
 		2125DEC419729585006C08B9 /* Helloworld_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2125DEC319729585006C08B9 /* Helloworld_SwiftTests.swift */; };
+		21CE6119197FD4ED00788605 /* CYPiOSVersionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE6118197FD4ED00788605 /* CYPiOSVersionChecker.m */; };
+		21CE611B197FE09300788605 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CE611A197FE09200788605 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,10 @@
 		2125DEBD19729585006C08B9 /* Helloworld SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helloworld SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2125DEC219729585006C08B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2125DEC319729585006C08B9 /* Helloworld_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helloworld_SwiftTests.swift; sourceTree = "<group>"; };
+		21CE6116197FD4EC00788605 /* Helloworld Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helloworld Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		21CE6117197FD4ED00788605 /* CYPiOSVersionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPiOSVersionChecker.h; sourceTree = "<group>"; };
+		21CE6118197FD4ED00788605 /* CYPiOSVersionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPiOSVersionChecker.m; sourceTree = "<group>"; };
+		21CE611A197FE09200788605 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CE611B197FE09300788605 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,7 @@
 		2125DEA219729585006C08B9 = {
 			isa = PBXGroup;
 			children = (
+				21CE611A197FE09200788605 /* UIKit.framework */,
 				2125DEAD19729585006C08B9 /* Helloworld Swift */,
 				2125DEC019729585006C08B9 /* Helloworld SwiftTests */,
 				2125DEAC19729585006C08B9 /* Products */,
@@ -80,6 +88,9 @@
 				2125DEB419729585006C08B9 /* Main.storyboard */,
 				2125DEB719729585006C08B9 /* Images.xcassets */,
 				2125DEAE19729585006C08B9 /* Supporting Files */,
+				21CE6117197FD4ED00788605 /* CYPiOSVersionChecker.h */,
+				21CE6118197FD4ED00788605 /* CYPiOSVersionChecker.m */,
+				21CE6116197FD4EC00788605 /* Helloworld Swift-Bridging-Header.h */,
 			);
 			path = "Helloworld Swift";
 			sourceTree = "<group>";
@@ -210,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2125DEB319729585006C08B9 /* ViewController.swift in Sources */,
+				21CE6119197FD4ED00788605 /* CYPiOSVersionChecker.m in Sources */,
 				2125DEB119729585006C08B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,10 +342,13 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = IOS6AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = IOS6LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Helloworld Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helloworld Swift/Helloworld Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,10 +361,12 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = IOS6AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = IOS6LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Helloworld Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helloworld Swift/Helloworld Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};

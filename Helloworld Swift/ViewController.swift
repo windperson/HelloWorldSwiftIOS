@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -24,11 +24,20 @@ class ViewController: UIViewController {
     }
     
     func helloworldSwift() {
-        var alert = UIAlertView();
-        alert.message = "Hello World Swift!"
-        alert.show();
+        
+        var osVersion = CYPiOSVersionChecker.getOSVersion()
+        if osVersion >= 8.0 {
+            println("iOS 8 Style Hello World")
+            let alert = UIAlertController(title: "Swift", message: "Hello World!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else{
+            println("iOS < 8 Style Hello World")
+            var alert = UIAlertView(title: "Swift", message: "Hello World!", delegate: nil, cancelButtonTitle: "OK");
+            alert.show()
+        }
     }
-
-
+    
 }
 
